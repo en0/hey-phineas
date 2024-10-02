@@ -23,7 +23,7 @@ fn randomizer_from_str(value: &str) -> Result<Box<dyn phineas_machine::Randomize
         // Because it is fun, not because it is useful.
         "first" => Ok(Box::new(const_randomizer::ConstantRandomizer::new(0))),
         "last" => Ok(Box::new(const_randomizer::ConstantRandomizer::new(max_usize))),
-        _ => Err("Expected one of built-in, nes, last".to_string())
+        _ => Err("Expected one of built-in, first, last".to_string())
     }
 }
 
