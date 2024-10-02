@@ -1,0 +1,8 @@
+[package]
+name = "phineas-machine"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+argh = "0.1.12"
+rand = "0.8.5"
