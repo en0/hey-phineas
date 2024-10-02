@@ -19,7 +19,7 @@ play factorio
 update arch
 EOF
 
-hey-phineas options.txt
+hey-phineas -f options.txt
 ```
 
 ## Why?
