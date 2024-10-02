@@ -11,15 +11,15 @@ struct CommandLineOpts {
     /// the file with the options
     file_name: String,
 
-    #[argh(option, short = 'r', from_str_fn(randomizer_from_str), default = "Box::new(phineas_machine::BuiltInRandomizer)")]
+    #[argh(option, short = 'r', from_str_fn(randomizer_from_str), default = "Box::new(hey_phineas::BuiltInRandomizer)")]
     /// the randomizer to use
-    randomizer: Box<dyn phineas_machine::Randomizer>
+    randomizer: Box<dyn hey_phineas::Randomizer>
 }
 
-fn randomizer_from_str(value: &str) -> Result<Box<dyn phineas_machine::Randomizer>, String> {
+fn randomizer_from_str(value: &str) -> Result<Box<dyn hey_phineas::Randomizer>, String> {
     let (max_usize, _) = 0usize.overflowing_sub(1);
     match value {
-        "built-in" => Ok(Box::new(phineas_machine::BuiltInRandomizer)),
+        "built-in" => Ok(Box::new(hey_phineas::BuiltInRandomizer)),
         // Because it is fun, not because it is useful.
         "first" => Ok(Box::new(const_randomizer::ConstantRandomizer::new(0))),
         "last" => Ok(Box::new(const_randomizer::ConstantRandomizer::new(max_usize))),

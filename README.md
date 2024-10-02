@@ -1,4 +1,4 @@
-# Phineas-Machine
+# Hey Phineas
 
 When you don't know what to do today, ask Phineas.
 
@@ -7,7 +7,7 @@ When you don't know what to do today, ask Phineas.
 __Install__
 
 ```
-cargo install --git https://github.com/en0/phineas-machine
+cargo install --git https://github.com/en0/hey-phineas
 ```
 
 __Run__
@@ -19,7 +19,7 @@ play factorio
 update arch
 EOF
 
-phineas-machine options.txt
+hey-phineas options.txt
 ```
 
 ## Why?
@@ -36,6 +36,6 @@ Example:
 ```bash
 echo -e "rewrite things in rust
 Fix deadlock in factorio train system
-Fix broken lid switch on arch install." | phineas-machine -f -
+Fix broken lid switch on arch install." | hey-phineas -f -
 ```
 

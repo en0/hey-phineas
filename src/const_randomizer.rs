@@ -10,7 +10,7 @@ impl ConstantRandomizer {
     }
 }
 
-impl phineas_machine::Randomizer for ConstantRandomizer {
+impl hey_phineas::Randomizer for ConstantRandomizer {
     fn pick(&self, limit: usize) -> usize {
         cmp::min(self.val, limit - 1)
     }
